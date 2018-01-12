@@ -6,16 +6,16 @@ package ru.mail.polis;
  */
 public class NotBalancedTreeException extends Exception {
 
-    public NotBalancedTreeException(String message) {
-        super(message);
-    }
+  public NotBalancedTreeException(String message) {
+    super(message);
+  }
 
-    public static NotBalancedTreeException create(String message, int leftHeight, int rightHeight, String nodeInfo) {
-        return new NotBalancedTreeException(
-                message + "\n"
-                + "leftHeight = " + leftHeight + ","
-                + "rightHeight = " + rightHeight + "\n"
-                + "nodeInfo = " + nodeInfo
-        );
-    }
+  public static NotBalancedTreeException create(String message, int leftHeight, int rightHeight, String nodeInfo) {
+    return new NotBalancedTreeException(
+            message + "\n"
+                    + "leftHeight = " + leftHeight + ","
+                    + "rightHeight = " + rightHeight + "\n"
+                    + "nodeInfo = " + nodeInfo
+    );
+  }
 }

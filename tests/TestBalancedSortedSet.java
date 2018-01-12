@@ -39,7 +39,7 @@ public class TestBalancedSortedSet extends AbstractSetTest {
 
     //todo: Закомментируйте или модифицируйте параметры если что-то ещё не реализовано и тестируйте
 
-    private static final Class<?>[] testClasses = (Class<?>[]) new Class<?>[]{
+    private static final Class<?>[] testClasses = (Class<?>[])  new Class<?>[]{
             AVLTree.class,
             RedBlackTree.class,
     };

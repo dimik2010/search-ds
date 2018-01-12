@@ -15,7 +15,6 @@ public class AbstractSetTest {
 
     protected static final Random RANDOM = new Random();
 
-    //todo: Закомментируйте или модифицируйте параметры если что-то ещё не реализовано и тестируйте
     protected static final boolean ENABLED_REMOVE = false;
 
     protected  <E> void checkTransformOperation(Set<E> validSet, Set<E> testSet, E value, TransformOperation transformOperation) {

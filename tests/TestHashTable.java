@@ -70,7 +70,7 @@ public class TestHashTable extends AbstractSetTest {
     public void test04_01() {
         if (testSet instanceof OpenHashTable) {
             OpenHashTable<CheckedOpenHashTableEntity> openHashTable = (OpenHashTable<CheckedOpenHashTableEntity>) testSet;
-            int tableSize = openHashTable.getTableSize();
+            int tableSize = openHashTable.getCapacity();
             CheckedOpenHashTableEntity entity = generate();
             Assert.assertTrue("isHashFunctionValid. tableSize = " + tableSize, entity.isHashFunctionValid(tableSize));
         }
@@ -80,12 +80,12 @@ public class TestHashTable extends AbstractSetTest {
     public void test04_02() {
         if (testSet instanceof OpenHashTable) {
             OpenHashTable<CheckedOpenHashTableEntity> openHashTable = (OpenHashTable<CheckedOpenHashTableEntity>) testSet;
-            int tableSize = openHashTable.getTableSize();
+            int tableSize = openHashTable.getCapacity();
             for (int i = 0; i < 1000; i++) {
                 CheckedOpenHashTableEntity entity = generate();
                 openHashTable.add(entity);
-                if (tableSize != openHashTable.getTableSize()) {
-                    tableSize = openHashTable.getTableSize();
+                if (tableSize != openHashTable.getCapacity()) {
+                    tableSize = openHashTable.getCapacity();
                     Assert.assertTrue("isHashFunctionValid. tableSize = " + tableSize, entity.isHashFunctionValid(tableSize));;
                 }
             }
